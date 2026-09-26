@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en" data-theme="umbra-ember" data-variant="ember" data-mode="night">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Access to nine internal systems, as a process · Yehor Feshchenko</title>
+<meta name="description" content="Joiners, movers and leavers across nine internal systems, turned from ad-hoc requests into an auditable process.">
+<script>
+/* Pre-paint: Umbra variant follows the season, mode follows the saved choice, then the OS. */
+(function () {
+  var m = new Date().getMonth(), v = ["ash","ash","plum","plum","plum","pine","pine","pine","ember","ember","ember","ash"][m];
+  var mode = null;
+  try { mode = localStorage.getItem("mode"); } catch (e) {}
+  if (!mode) mode = matchMedia("(prefers-color-scheme: light)").matches ? "day" : "night";
+  var r = document.documentElement;
+  r.classList.add("js");
+  r.dataset.variant = v; r.dataset.mode = mode;
+  r.dataset.theme = "umbra-" + v + (mode === "day" ? "-day" : "");
+})();
+</script>
+<link rel="stylesheet" href="../../assets/umbra.css">
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <a class="home mono" href="../../index.html"><span class="mark" aria-hidden="true">◈</span> Yehor Feshchenko</a>
+  <button class="mode" type="button" aria-label="Switch light or dark mode"><span aria-hidden="true">◐</span> <span class="mode-label">mode</span></button>
+</header>
+<main id="main">
+<article class="case">
+  <p class="eyebrow mono"><a href="../../index.html">← all work</a> · Lazerhouse</p>
+  <h1>Access to nine internal systems, as a process</h1>
+  <p class="pitch">Joiners, movers and leavers across nine internal systems, turned from ad-hoc requests into an auditable process.</p>
+
+  <dl class="prar">
+    <div><dt class="mono">Problem</dt><dd>Access to internal systems was granted ad hoc; nobody could say who had what</dd></div>
+    <div><dt class="mono">My role</dt><dd>Owner of accounts and access across 9 internal systems</dd></div>
+    <div><dt class="mono">What I did</dt><dd>Role-based needs map; request → approval → provisioning → revocation, revocation tied to leaving</dd></div>
+    <div><dt class="mono">Result</dt><dd>Joiner and leaver changes became an auditable process, not ad-hoc requests</dd></div>
+  </dl>
+
+  <section>
+    <h2>The situation</h2>
+    <p>Access to internal systems was granted by request, case by case. Nobody could answer &quot;who has access to what&quot; without asking around.</p>
+  </section>
+  <section>
+    <h2>What I designed</h2>
+    <p>A map of which roles need which systems, and one flow for every change, from request to approval to provisioning to revocation. Revocation is tied to a person leaving, so it cannot be forgotten.</p>
+  </section>
+  <section>
+    <h2>What it gave the company</h2>
+    <p>Access changes became a process with a record, not a favour. The question &quot;who has what&quot; has an answer.</p>
+  </section>
+
+  <footer class="used">
+    <h2 class="mono">Skills used</h2>
+    <div class="chips">
+      <span class="chip plain">Business analysis</span>
+      <span class="chip plain">BPMN</span>
+      <span class="chip plain">Stakeholder management</span>
+      <span class="chip plain">Requirements elicitation</span>
+    </div>
+  </footer>
+</article>
+
+</main>
+<footer class="foot">
+  <div class="contacts">
+    <a href="mailto:cv@aliases.feshchenko.org">✉️ cv@aliases.feshchenko.org</a>
+    <a href="https://linkedin.com/in/jerzyf" rel="me">💼 LinkedIn</a>
+    <a href="../../cv.pdf">📄 CV (PDF)</a>
+  </div>
+  <p class="fine mono">📍 Kyiv, Ukraine · remote · no cookies, no tracking · code MIT, text CC BY-ND 4.0</p>
+</footer>
+<script src="../../assets/site.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en" data-theme="umbra-ember" data-variant="ember" data-mode="night">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Not found · Yehor Feshchenko</title>
+<meta name="description" content="Yehor Feshchenko, system analyst in Kyiv. Requirements, integrations and AI features, with case studies.">
+<script>
+/* Pre-paint: Umbra variant follows the season, mode follows the saved choice, then the OS. */
+(function () {
+  var m = new Date().getMonth(), v = ["ash","ash","plum","plum","plum","pine","pine","pine","ember","ember","ember","ash"][m];
+  var mode = null;
+  try { mode = localStorage.getItem("mode"); } catch (e) {}
+  if (!mode) mode = matchMedia("(prefers-color-scheme: light)").matches ? "day" : "night";
+  var r = document.documentElement;
+  r.classList.add("js");
+  r.dataset.variant = v; r.dataset.mode = mode;
+  r.dataset.theme = "umbra-" + v + (mode === "day" ? "-day" : "");
+})();
+</script>
+<link rel="stylesheet" href="/assets/umbra.css">
+<link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <a class="home mono" href="/index.html"><span class="mark" aria-hidden="true">◈</span> Yehor Feshchenko</a>
+  <button class="mode" type="button" aria-label="Switch light or dark mode"><span aria-hidden="true">◐</span> <span class="mode-label">mode</span></button>
+</header>
+<main id="main">
+<section class="hero">
+  <p class="eyebrow mono">404</p>
+  <h1>Nothing here</h1>
+  <p class="pitch">This page does not exist. <a href="/">Go to the start</a>.</p>
+</section>
+
+</main>
+<footer class="foot">
+  <div class="contacts">
+    <a href="mailto:cv@aliases.feshchenko.org">✉️ cv@aliases.feshchenko.org</a>
+    <a href="https://linkedin.com/in/jerzyf" rel="me">💼 LinkedIn</a>
+    <a href="/cv.pdf">📄 CV (PDF)</a>
+  </div>
+  <p class="fine mono">📍 Kyiv, Ukraine · remote · no cookies, no tracking · code MIT, text CC BY-ND 4.0</p>
+</footer>
+<script src="/assets/site.js" defer></script>
+</body>
+</html>

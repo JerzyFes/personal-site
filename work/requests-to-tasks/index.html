@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en" data-theme="umbra-ember" data-variant="ember" data-mode="night">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>From vague requests to ready development tasks · Yehor Feshchenko</title>
+<meta name="description" content="The point where a business request becomes a task a developer can start without another round of questions.">
+<script>
+/* Pre-paint: Umbra variant follows the season, mode follows the saved choice, then the OS. */
+(function () {
+  var m = new Date().getMonth(), v = ["ash","ash","plum","plum","plum","pine","pine","pine","ember","ember","ember","ash"][m];
+  var mode = null;
+  try { mode = localStorage.getItem("mode"); } catch (e) {}
+  if (!mode) mode = matchMedia("(prefers-color-scheme: light)").matches ? "day" : "night";
+  var r = document.documentElement;
+  r.classList.add("js");
+  r.dataset.variant = v; r.dataset.mode = mode;
+  r.dataset.theme = "umbra-" + v + (mode === "day" ? "-day" : "");
+})();
+</script>
+<link rel="stylesheet" href="../../assets/umbra.css">
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <a class="home mono" href="../../index.html"><span class="mark" aria-hidden="true">◈</span> Yehor Feshchenko</a>
+  <button class="mode" type="button" aria-label="Switch light or dark mode"><span aria-hidden="true">◐</span> <span class="mode-label">mode</span></button>
+</header>
+<main id="main">
+<article class="case">
+  <p class="eyebrow mono"><a href="../../index.html">← all work</a> · Lazerhouse</p>
+  <h1>From vague requests to ready development tasks</h1>
+  <p class="pitch">The point where a business request becomes a task a developer can start without another round of questions.</p>
+
+  <dl class="prar">
+    <div><dt class="mono">Problem</dt><dd>Requests reached developers as raw complaints; tasks bounced back for clarification</dd></div>
+    <div><dt class="mono">My role</dt><dd>The single point where a request becomes a task</dd></div>
+    <div><dt class="mono">What I did</dt><dd>Clarifying interview, check of current system behaviour, spec with repro path, priority against SLA</dd></div>
+    <div><dt class="mono">Result</dt><dd>Tasks reach development ready to start, without another clarification round</dd></div>
+  </dl>
+
+  <section>
+    <h2>The situation</h2>
+    <p>Requests from the business arrived as complaints or one-line wishes. Developers sent them back with questions, and each round cost days.</p>
+  </section>
+  <section>
+    <h2>What I changed</h2>
+    <p>Every request now passes one step before development. I interview the requester, check how the system behaves today, write the spec with a reproduction path and acceptance criteria, and set a priority against the service level.</p>
+  </section>
+  <section>
+    <h2>What it gave the team</h2>
+    <p>Tasks reach development ready to start. Developers spend their time building instead of asking.</p>
+  </section>
+
+  <footer class="used">
+    <h2 class="mono">Skills used</h2>
+    <div class="chips">
+      <span class="chip plain">Requirements elicitation</span>
+      <span class="chip plain">User stories &amp; acceptance criteria</span>
+      <span class="chip plain">Stakeholder management</span>
+      <span class="chip plain">System analysis</span>
+      <span class="chip plain">Jira</span>
+      <span class="chip plain">Confluence</span>
+    </div>
+  </footer>
+</article>
+
+</main>
+<footer class="foot">
+  <div class="contacts">
+    <a href="mailto:cv@aliases.feshchenko.org">✉️ cv@aliases.feshchenko.org</a>
+    <a href="https://linkedin.com/in/jerzyf" rel="me">💼 LinkedIn</a>
+    <a href="../../cv.pdf">📄 CV (PDF)</a>
+  </div>
+  <p class="fine mono">📍 Kyiv, Ukraine · remote · no cookies, no tracking · code MIT, text CC BY-ND 4.0</p>
+</footer>
+<script src="../../assets/site.js" defer></script>
+</body>
+</html>

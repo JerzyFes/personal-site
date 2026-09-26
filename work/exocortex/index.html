@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en" data-theme="umbra-ember" data-variant="ember" data-mode="night">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Exocortex, a multi-agent AI system I run daily · Yehor Feshchenko</title>
+<meta name="description" content="A plain-file knowledge base worked by several AI agents, with task routing, guardrails and human approval on anything that leaves the machine.">
+<script>
+/* Pre-paint: Umbra variant follows the season, mode follows the saved choice, then the OS. */
+(function () {
+  var m = new Date().getMonth(), v = ["ash","ash","plum","plum","plum","pine","pine","pine","ember","ember","ember","ash"][m];
+  var mode = null;
+  try { mode = localStorage.getItem("mode"); } catch (e) {}
+  if (!mode) mode = matchMedia("(prefers-color-scheme: light)").matches ? "day" : "night";
+  var r = document.documentElement;
+  r.classList.add("js");
+  r.dataset.variant = v; r.dataset.mode = mode;
+  r.dataset.theme = "umbra-" + v + (mode === "day" ? "-day" : "");
+})();
+</script>
+<link rel="stylesheet" href="../../assets/umbra.css">
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <a class="home mono" href="../../index.html"><span class="mark" aria-hidden="true">◈</span> Yehor Feshchenko</a>
+  <button class="mode" type="button" aria-label="Switch light or dark mode"><span aria-hidden="true">◐</span> <span class="mode-label">mode</span></button>
+</header>
+<main id="main">
+<article class="case">
+  <p class="eyebrow mono"><a href="../../index.html">← all work</a> · personal project</p>
+  <h1>Exocortex, a multi-agent AI system I run daily</h1>
+  <p class="pitch">A plain-file knowledge base worked by several AI agents, with task routing, guardrails and human approval on anything that leaves the machine.</p>
+
+  <dl class="prar">
+    <div><dt class="mono">Problem</dt><dd>One person, many knowledge workflows (notes, tasks, research, planning). I wanted real help from AI without vendor lock-in and without my data leaking.</dd></div>
+    <div><dt class="mono">My role</dt><dd>Designer, analyst and daily operator.</dd></div>
+    <div><dt class="mono">What I did</dt><dd>Plain Markdown files as the single store; several AI coding agents working the same files; a task queue where every task is a written packet with a route and a done-test; guards on every write.</dd></div>
+    <div><dt class="mono">Result</dt><dd>In daily use since April 2026. Every task has an owner, a route and a check, and the guards have stopped real mistakes before they landed.</dd></div>
+  </dl>
+
+  <section>
+    <h2>Why plain files</h2>
+    <p>Every note, rule and task is a Markdown file in one git repository. Any tool can read it, nothing is locked inside an app, and every change has a history. The AI agents work on the same files I do.</p>
+  </section>
+  <section>
+    <h2>Tasks as packets</h2>
+    <p>A task is a small written brief with a goal, the facts it needs, a done-test and a route (which model, how much effort). An agent claims it, does it, and closes it with a report. This is requirements work applied to AI. An unclear task produces unclear output, so the brief is where quality starts.</p>
+  </section>
+  <section>
+    <h2>Routing by task shape</h2>
+    <p>Cheap, fast models do bulk reading and search; stronger models do design, decisions and code. The route is chosen by what the task looks like, and cost is tracked per task, so spend is a decision, not a surprise.</p>
+  </section>
+  <section>
+    <h2>Guardrails and the human in the loop</h2>
+    <p>Agents cannot push, cannot read secret paths, and cannot change their own rules without my approval at a real keyboard. Commits are scanned for secrets. Text an agent reads from the web or a message is treated as data, never as instructions. Anything sent in my name waits for my approval.</p>
+  </section>
+  <section>
+    <h2>What a team can take from it</h2>
+    <p>Write the brief before the prompt. Route work by its shape. Check before you trust. Guard the write path. Keep a human approval where the action leaves the building.</p>
+  </section>
+
+  <footer class="used">
+    <h2 class="mono">Skills used</h2>
+    <div class="chips">
+      <span class="chip plain">Large Language Models (LLM)</span>
+      <span class="chip plain">Agent workflows / MCP</span>
+      <span class="chip plain">Prompt engineering</span>
+      <span class="chip plain">System analysis</span>
+      <span class="chip plain">User stories &amp; acceptance criteria</span>
+    </div>
+  </footer>
+</article>
+
+</main>
+<footer class="foot">
+  <div class="contacts">
+    <a href="mailto:cv@aliases.feshchenko.org">✉️ cv@aliases.feshchenko.org</a>
+    <a href="https://linkedin.com/in/jerzyf" rel="me">💼 LinkedIn</a>
+    <a href="../../cv.pdf">📄 CV (PDF)</a>
+  </div>
+  <p class="fine mono">📍 Kyiv, Ukraine · remote · no cookies, no tracking · code MIT, text CC BY-ND 4.0</p>
+</footer>
+<script src="../../assets/site.js" defer></script>
+</body>
+</html>

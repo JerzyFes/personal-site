@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en" data-theme="umbra-ember" data-variant="ember" data-mode="night">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yehor Feshchenko</title>
+<meta name="description" content="Yehor Feshchenko, system analyst in Kyiv. Requirements, integrations and AI features, with case studies.">
+<script>
+/* Pre-paint: Umbra variant follows the season, mode follows the saved choice, then the OS. */
+(function () {
+  var m = new Date().getMonth(), v = ["ash","ash","plum","plum","plum","pine","pine","pine","ember","ember","ember","ash"][m];
+  var mode = null;
+  try { mode = localStorage.getItem("mode"); } catch (e) {}
+  if (!mode) mode = matchMedia("(prefers-color-scheme: light)").matches ? "day" : "night";
+  var r = document.documentElement;
+  r.classList.add("js");
+  r.dataset.variant = v; r.dataset.mode = mode;
+  r.dataset.theme = "umbra-" + v + (mode === "day" ? "-day" : "");
+})();
+</script>
+<link rel="stylesheet" href="assets/umbra.css">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <a class="home mono" href="index.html"><span class="mark" aria-hidden="true">◈</span> Yehor Feshchenko</a>
+  <button class="mode" type="button" aria-label="Switch light or dark mode"><span aria-hidden="true">◐</span> <span class="mode-label">mode</span></button>
+</header>
+<main id="main">
+<section class="hero">
+  <p class="eyebrow mono">System Analyst · AI Integration</p>
+  <h1>Yehor Feshchenko</h1>
+  <p class="pitch">I turn vague business requests into work a team can build, and I run my own multi-agent AI system every day.</p>
+  <dl class="meta mono">
+    <div><dt>now</dt><dd>Senior System Analyst · Lazerhouse</dd></div>
+    <div><dt>analyst since</dt><dd>Sep 2023</dd></div>
+    <div><dt>based</dt><dd>Kyiv, Ukraine · remote</dd></div>
+  </dl>
+</section>
+
+<section class="now" aria-labelledby="now-h">
+  <h2 id="now-h">Now</h2>
+  <ul>
+    <li><span class="k mono">Building</span> acceptance criteria for AI features, and the guardrails that make an AI agent safe to rely on</li>
+    <li><span class="k mono">Running</span> a personal multi-agent system that routes tasks between AI models and checks their work</li>
+  </ul>
+</section>
+
+<section class="career" aria-labelledby="career-h">
+  <h2 id="career-h">Career</h2>
+  <p class="hint">Each block is a role, drawn to scale in time. Pick one to read what I did there.</p>
+  <div class="ruler" role="group" aria-label="Roles over time">
+    <button type="button" class="seg" data-role="0" aria-pressed="false"
+      style="left:2.381%;width:33.333%"
+      title="Technical Support Manager">Technical Support Manager</button>
+    <button type="button" class="seg" data-role="1" aria-pressed="false"
+      style="left:35.714%;width:16.667%"
+      title="Technical Account Manager">Technical Account Manager</button>
+    <button type="button" class="seg" data-role="2" aria-pressed="false"
+      style="left:52.381%;width:36.905%"
+      title="Middle System Analyst">Middle System Analyst</button>
+    <button type="button" class="seg on" data-role="3" aria-pressed="true"
+      style="left:89.286%;width:7.143%"
+      title="Senior System Analyst">Senior System Analyst</button>
+  </div>
+  <div class="ticks mono" aria-hidden="true">
+    <span style="left:0.000%">2020</span>
+    <span style="left:14.286%">2021</span>
+    <span style="left:28.571%">2022</span>
+    <span style="left:42.857%">2023</span>
+    <span style="left:57.143%">2024</span>
+    <span style="left:71.429%">2025</span>
+    <span style="left:85.714%">2026</span>
+  </div>
+  <article class="role" data-role="0">
+    <h3>Technical Support Manager</h3>
+    <p class="when mono">Samsung Electronics Ukraine · Mar 2020 – Jun 2022</p>
+    <ul>
+      <li>Diagnosed issues from vague user reports; escalated to developers with repro steps and impact</li>
+      <li>Wrote troubleshooting guides from recurring cases, moving repeat issues to self-serve resolution</li>
+      <li>Technical pre-sales and live-chat support for the online business unit</li>
+      <li>Turned recurring issues and chat-quality patterns into feedback for scripts and materials</li>
+    </ul>
+  </article>
+  <article class="role" data-role="1">
+    <h3>Technical Account Manager</h3>
+    <p class="when mono">Lazerhouse · Jul 2022 – Aug 2023</p>
+    <ul>
+      <li>Support and account management for the systems I later analysed</li>
+      <li>Owned work accounts and service access, which later became the access-management process</li>
+    </ul>
+  </article>
+  <article class="role" data-role="2">
+    <h3>Middle System Analyst</h3>
+    <p class="when mono">Lazerhouse · Sep 2023 – Mar 2026</p>
+    <ul>
+      <li>Turned vague business requests into specified, prioritised development tasks</li>
+      <li>Translated requirements between business stakeholders and developers in both directions</li>
+      <li>Analysed incidents across CRM, 1C, website and payment integrations and documented each case</li>
+    </ul>
+  </article>
+  <article class="role on" data-role="3">
+    <h3>Senior System Analyst</h3>
+    <p class="when mono">Lazerhouse · Apr 2026 – Present</p>
+    <ul>
+      <li>Own requirements end to end, from elicitation and scoping to dev handoff and UAT</li>
+      <li>Designed and own the access-management process for 9 internal systems (request, approval, provisioning, revocation)</li>
+      <li>Analyse incidents across CRM, 1C, website and payment integrations and turn recurring ones into process changes</li>
+    </ul>
+  </article>
+</section>
+
+<section class="map" aria-labelledby="map-h">
+  <h2 id="map-h">Skills ↔ work</h2>
+  <p class="hint">Pick a skill to see where I used it. Pick it again to clear.</p>
+  <div class="map-grid">
+    <div class="skills">
+      <h3 class="mono">Analysis</h3>
+      <div class="chips">
+        <button type="button" class="chip" aria-pressed="false" data-skill="Business analysis">Business analysis</button>
+        <button type="button" class="chip" aria-pressed="false" data-skill="System analysis">System analysis</button>
+        <button type="button" class="chip" aria-pressed="false" data-skill="Requirements elicitation">Requirements elicitation</button>
+        <button type="button" class="chip" aria-pressed="false" data-skill="User stories &amp; acceptance criteria">User stories &amp; acceptance criteria</button>
+        <button type="button" class="chip" aria-pressed="false" data-skill="BPMN">BPMN</button>
+        <span class="chip plain">UML</span>
+        <span class="chip plain">Data modeling</span>
+        <button type="button" class="chip" aria-pressed="false" data-skill="Stakeholder management">Stakeholder management</button>
+        <span class="chip plain">Scrum</span>
+        <span class="chip plain">UAT</span>
+      </div>
+      <h3 class="mono">Tools</h3>
+      <div class="chips">
+        <button type="button" class="chip" aria-pressed="false" data-skill="Jira">Jira</button>
+        <button type="button" class="chip" aria-pressed="false" data-skill="Confluence">Confluence</button>
+        <span class="chip plain">REST APIs</span>
+        <span class="chip plain">Postman</span>
+        <span class="chip plain">SQL</span>
+      </div>
+      <h3 class="mono">AI</h3>
+      <div class="chips">
+        <button type="button" class="chip" aria-pressed="false" data-skill="Large Language Models (LLM)">Large Language Models (LLM)</button>
+        <span class="chip plain">Retrieval-Augmented Generation (RAG)</span>
+        <button type="button" class="chip" aria-pressed="false" data-skill="Prompt engineering">Prompt engineering</button>
+        <button type="button" class="chip" aria-pressed="false" data-skill="Agent workflows / MCP">Agent workflows / MCP</button>
+      </div>
+    </div>
+    <div class="cases" aria-live="polite">
+      <a class="card" href="work/exocortex/index.html" data-skills="Large Language Models (LLM)|Agent workflows / MCP|Prompt engineering|System analysis|User stories &amp; acceptance criteria">
+        <span class="org mono">personal project</span>
+        <strong>Exocortex, a multi-agent AI system I run daily</strong>
+        <span class="sum">A plain-file knowledge base worked by several AI agents, with task routing, guardrails and human approval on anything that leaves the machine.</span>
+      </a>
+      <a class="card" href="work/requests-to-tasks/index.html" data-skills="Requirements elicitation|User stories &amp; acceptance criteria|Stakeholder management|System analysis|Jira|Confluence">
+        <span class="org mono">Lazerhouse</span>
+        <strong>From vague requests to ready development tasks</strong>
+        <span class="sum">The point where a business request becomes a task a developer can start without another round of questions.</span>
+      </a>
+      <a class="card" href="work/access-management/index.html" data-skills="Business analysis|BPMN|Stakeholder management|Requirements elicitation">
+        <span class="org mono">Lazerhouse</span>
+        <strong>Access to nine internal systems, as a process</strong>
+        <span class="sum">Joiners, movers and leavers across nine internal systems, turned from ad-hoc requests into an auditable process.</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="more" aria-labelledby="more-h">
+  <h2 id="more-h">Also</h2>
+  <dl class="meta mono">
+    <div><dt>languages</dt><dd>English · B2+ · Ukrainian · native · Russian · native</dd></div>
+    <div><dt>education</dt><dd>BA, Philology (Slavic Languages and Literatures, incl. Translation), Taras Shevchenko National University of Kyiv, Jun 2021</dd></div>
+  </dl>
+</section>
+
+</main>
+<footer class="foot">
+  <div class="contacts">
+    <a href="mailto:cv@aliases.feshchenko.org">✉️ cv@aliases.feshchenko.org</a>
+    <a href="https://linkedin.com/in/jerzyf" rel="me">💼 LinkedIn</a>
+    <a href="cv.pdf">📄 CV (PDF)</a>
+  </div>
+  <p class="fine mono">📍 Kyiv, Ukraine · remote · no cookies, no tracking · code MIT, text CC BY-ND 4.0</p>
+</footer>
+<script src="assets/site.js" defer></script>
+</body>
+</html>

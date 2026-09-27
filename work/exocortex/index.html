@@ -5,6 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Exocortex, a multi-agent AI system I run daily · Yehor Feshchenko</title>
 <meta name="description" content="A plain-file knowledge base worked by several AI agents, with task routing, guardrails and human approval on anything that leaves the machine.">
+<link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Exocortex, a multi-agent AI system I run daily · Yehor Feshchenko">
+<meta property="og:description" content="A plain-file knowledge base worked by several AI agents, with task routing, guardrails and human approval on anything that leaves the machine.">
+<meta property="og:image" content="https://yehor.feshchenko.org/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <script>
 /* Pre-paint: Umbra variant follows the season, mode follows the saved choice, then the OS. */
 (function () {
@@ -39,6 +47,45 @@
     <div><dt class="mono">What I did</dt><dd>Plain Markdown files as the single store; several AI coding agents working the same files; a task queue where every task is a written packet with a route and a done-test; guards on every write.</dd></div>
     <div><dt class="mono">Result</dt><dd>In daily use since April 2026. Every task has an owner, a route and a check, and the guards have stopped real mistakes before they landed.</dd></div>
   </dl>
+
+  <section class="flow-demo" aria-labelledby="flow-h">
+    <h2 id="flow-h">Follow one task through the system</h2>
+    <p class="hint">Pick a task, then step through it.</p>
+    <div class="stage packet">
+      <div class="seg-ctl" role="group" aria-label="Scenario">
+        <button type="button" data-scn="good" data-stop="5" aria-pressed="true">A normal task</button>
+        <button type="button" data-scn="bad" data-stop="3" aria-pressed="false">An agent oversteps</button>
+      </div>
+      <ol class="flow">
+        <li><span class="node" aria-hidden="true">📝</span><b>A written brief</b><span class="d">a goal, the facts, a done-test and a route</span>
+          <span class="say mono" data-scn="good">Compare five note apps on privacy. Done when every claim has a source.</span>
+          <span class="say mono" data-scn="bad">Tidy the task queue and publish the result.</span>
+        </li>
+        <li><span class="node" aria-hidden="true">🧭</span><b>Routed by its shape</b><span class="d">bulk reading goes to a cheap model, decisions to a strong one</span>
+          <span class="say mono" data-scn="good">Reading five websites, so a cheap, fast model.</span>
+          <span class="say mono" data-scn="bad">Editing files, so a strong model.</span>
+        </li>
+        <li><span class="node" aria-hidden="true">🤖</span><b>An agent does the work</b><span class="d">on the same plain files I use</span>
+          <span class="say mono" data-scn="good">Reads the sites and writes a table with a link for every claim.</span>
+          <span class="say mono" data-scn="bad">Tidies the queue, then tries to push it online.</span>
+        </li>
+        <li><span class="node" aria-hidden="true">🛡️</span><b>Guards check every write</b><span class="d">no secret paths, no pushing, no changes to its own rules</span>
+          <span class="say mono" data-scn="good">Every write allowed. The secret scan is clean.</span>
+          <span class="say mono" data-scn="bad">Blocked. Agents may not push. The task stops here and waits for me.</span>
+        </li>
+        <li><span class="node" aria-hidden="true">👤</span><b>I approve what leaves the machine</b><span class="d">anything sent or published in my name</span>
+          <span class="say mono" data-scn="good">Nothing leaves the machine, so no approval is needed.</span>
+        </li>
+        <li><span class="node" aria-hidden="true">✅</span><b>Closed with a report</b><span class="d">what was done, how to check it, what it cost</span>
+          <span class="say mono" data-scn="good">The done-test passed, the report is filed, the cost is logged.</span>
+        </li>
+      </ol>
+      <div class="ctl">
+        <button class="btn" type="button" data-act="reset">↺ start over</button>
+        <button class="btn primary" type="button" data-act="next">▶ send the task</button>
+      </div>
+    </div>
+  </section>
 
   <section>
     <h2>Why plain files</h2>

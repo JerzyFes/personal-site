@@ -5,6 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Yehor Feshchenko</title>
 <meta name="description" content="Yehor Feshchenko, system analyst in Kyiv. Requirements, integrations and AI features, with case studies.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Yehor Feshchenko">
+<meta property="og:description" content="Yehor Feshchenko, system analyst in Kyiv. Requirements, integrations and AI features, with case studies.">
+<meta property="og:image" content="https://yehor.feshchenko.org/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <script>
 /* Pre-paint: Umbra variant follows the season, mode follows the saved choice, then the OS. */
 (function () {
@@ -37,6 +45,55 @@
     <div><dt>analyst since</dt><dd>Sep 2023</dd></div>
     <div><dt>based</dt><dd>Kyiv, Ukraine · remote</dd></div>
   </dl>
+</section>
+
+<section class="demo" aria-labelledby="demo-h">
+  <h2 id="demo-h">How I work</h2>
+  <p class="hint">A made-up request, typical of the real ones. Step through what happens to it.</p>
+  <div class="stage stepper" data-steps="4" data-labels="What I ask first|What I check|The task I write|Ready?|Again">
+    <ol class="rail mono" aria-hidden="true">
+      <li class="done">heard</li>
+      <li>asked</li>
+      <li>checked</li>
+      <li>written</li>
+      <li>ready</li>
+    </ol>
+    <p class="ask">“The sales report is <span class="vague">slow</span> and <span class="vague">sometimes wrong</span>. Can you <span class="vague">fix it</span>?”<span class="who mono">a one-line request from the sales team, Monday morning</span></p>
+    <div class="layer" data-layer="1">
+      <h3 class="mono">1 · Questions I ask</h3>
+      <ul class="qa">
+        <li><span aria-hidden="true">❓</span><span>Which report, and who opens it? <em>The weekly report by region, used by 12 managers.</em></span></li>
+        <li><span aria-hidden="true">❓</span><span>How slow? <em>About 40 seconds to open.</em></span></li>
+        <li><span aria-hidden="true">❓</span><span>Wrong how? <em>Some returns are missing when you filter by week.</em></span></li>
+      </ul>
+    </div>
+    <div class="layer" data-layer="2">
+      <h3 class="mono">2 · What I check in the system</h3>
+      <ul class="qa">
+        <li><span aria-hidden="true">🔎</span><span>Reproduced it. A return booked on a Sunday lands in the next week.</span></li>
+        <li><span aria-hidden="true">🔎</span><span>The 40 seconds come from recalculating all history every time the report opens.</span></li>
+      </ul>
+    </div>
+    <div class="layer" data-layer="3">
+      <h3 class="mono">3 · The task I write</h3>
+      <dl class="spec">
+        <dt class="mono">Problem</dt><dd>The weekly report counts Sunday returns in the wrong week, and it takes about 40 seconds to open.</dd>
+        <dt class="mono">Reproduce</dt><dd>Book a return on a Sunday, open the report for that week, and the return is missing.</dd>
+        <dt class="mono">Accept when</dt><dd>
+          <p><b class="mono">Given</b> a return booked on a Sunday, <b class="mono">when</b> I open that week, <b class="mono">then</b> it is counted in that week.</p>
+          <p><b class="mono">Given</b> the report is opened, <b class="mono">then</b> it loads in under 5 seconds.</p>
+        </dd>
+        <dt class="mono">Priority</dt><dd>P2: wrong numbers in a report people use for decisions.</dd>
+      </dl>
+    </div>
+    <div class="layer" data-layer="4">
+      <p class="ready mono">✅ Ready for development. No questions left.</p>
+    </div>
+    <div class="ctl">
+      <button class="btn" type="button" data-act="back" disabled>← back</button>
+      <button class="btn primary" type="button" data-act="next">▶ What I ask first</button>
+    </div>
+  </div>
 </section>
 
 <section class="now" aria-labelledby="now-h">
